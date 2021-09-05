@@ -28,15 +28,11 @@ const Home: React.FC = () => {
       </IonHeader>
       <IonContent>
         <IonSlides pager={true} options={slideOpts}>
-          <IonSlide>
-            <h1>Slide 1</h1>
-          </IonSlide>
-          <IonSlide>
-            <h1>Slide 2</h1>
-          </IonSlide>
-          <IonSlide>
-            <h1>Slide 3</h1>
-          </IonSlide>
+          {categories.map((category: any) => (
+            <IonSlide>
+              <img src={category.img} alt="categories" />
+            </IonSlide>
+          ))}
         </IonSlides>
       </IonContent>
     </IonPage>
